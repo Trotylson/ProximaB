@@ -1,15 +1,20 @@
 import player
 import mapAreaAvailability as MAA
+import collisionObjects
 import etherLocation as ether
 import medicalRoomLocation as medRoom
 import engineeringRoomLocation as engiRoom
 import disposalRoomLocalization as disposalRoom
-import chaningRoomLocation as changingRoom
+import changingRoomLocation as changingRoom
 import coreWarehouseLocation as coreWarehouse
 import bioengineeringComponentsWarehouseLocation as BCWarehouse
 import biowasteIncineratorLocation as biowasteIncinerator
+import desinfectionRoomLocation as desinfectionRoom
+import warehouseOfRecoveredComponentsLocation as WORC
+import mainControlRoomLocation as MCRoom
+import powerStationLocation as powerStation
 
-class Map(MAA.MapAreaAvailability): # inherits by boolean variables in class!!!
+class Map(MAA.Availabilty): # inherits by boolean variables class!!!
     pass
 
 forwardLocation = ''
@@ -18,66 +23,93 @@ leftLocation = ''
 rightLocation = ''
 
 def newLocation(playerChoose):
-    if playerChoose == 'FORWARD':
+    if playerChoose == 'forward':
         player.location = forwardLocation
         return forwardLocation
-    elif playerChoose == 'BACKWARD':
+    elif playerChoose == 'backward':
         player.location = backwardLocation
         return backwardLocation
-    elif playerChoose == 'LEFT':
+    elif playerChoose == 'left':
         player.location = leftLocation
         return leftLocation
-    elif playerChoose == 'RIGHT':
+    elif playerChoose == 'right':
         player.location = rightLocation
         return rightLocation
 
 
 def newCoordinates(playerLocation):
-    if playerLocation == 'Ether':
+    if playerLocation == ether.localization:
         ether.setCoordinates()
 
-    elif playerLocation == 'Medical room':
+    elif playerLocation == medRoom.localization:
         medRoom.setCoordinates()
 
-    elif playerLocation == 'Engineering room':
+    elif playerLocation == engiRoom.localization:
         engiRoom.setCoordinates()
 
-    elif playerLocation == 'Disposal room':
+    elif playerLocation == disposalRoom.localization:
         disposalRoom.setCoordinates()
 
-    elif playerLocation == 'Changing room':
+    elif playerLocation == changingRoom.localization:
         changingRoom.setCoordinates()
 
-    elif playerLocation == 'Core warehouse':
+    elif playerLocation == coreWarehouse.localization:
         coreWarehouse.setCoordinates()
 
-    elif playerLocation == 'Bioengineering components warehouse':
+    elif playerLocation == BCWarehouse.localization:
         BCWarehouse.setCoordinates()
 
-    elif playerLocation == 'Biowaste incinerator':
+    elif playerLocation == biowasteIncinerator.localization:
         biowasteIncinerator.setCoordinates()
 
+    elif playerLocation == desinfectionRoom.localization:
+        desinfectionRoom.setCoordinates()
+
+    elif playerLocation == WORC.localization:
+        WORC.setCoordinates()
+
+    elif playerLocation == MCRoom.localization:
+        MCRoom.setCoordinates()
+
+    elif playerLocation == powerStation.localization:
+        powerStation.setCoordinates()
+
 def tryEnter(playerLocation):
-    if playerLocation == 'Ether':
+    if playerLocation == ether.localization:
         ether.enter()
 
-    elif playerLocation == 'Medical room':
+    elif playerLocation == medRoom.localization:
         medRoom.enter()
 
-    elif playerLocation == 'Engineering room':
+    elif playerLocation == engiRoom.localization:
         engiRoom.enter()
 
-    elif playerLocation == 'Disposal room':
+    elif playerLocation == disposalRoom.localization:
         disposalRoom.enter()
 
-    elif playerLocation == 'Changing room':
+    elif playerLocation == changingRoom.localization:
         changingRoom.enter()
 
-    elif playerLocation == 'Core warehouse':
+    elif playerLocation == coreWarehouse.localization:
         coreWarehouse.enter()
 
-    elif playerLocation == 'Bioengineering components warehouse':
+    elif playerLocation == BCWarehouse.localization:
         BCWarehouse.enter()
 
-    elif playerLocation == 'Biowaste incinerator':
+    elif playerLocation == biowasteIncinerator.localization:
         biowasteIncinerator.enter()
+
+    elif playerLocation == desinfectionRoom.localization:
+        desinfectionRoom.enter()
+
+    elif playerLocation == WORC.localization:
+        WORC.enter()
+
+    elif playerLocation == MCRoom.localization:
+        MCRoom.enter()
+
+    elif playerLocation == powerStation.localization:
+        powerStation.enter()
+
+    elif playerLocation == collisionObjects.localization:
+        collisionObjects.checkCollision()

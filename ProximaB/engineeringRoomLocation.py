@@ -5,17 +5,19 @@ import map
 class EngineeringRoom:
     pass
 
+localization = 'Engineering room'
+
 def setCoordinates():
-    map.forwardLocation = 'Wall'
-    map.backwardLocation = 'Wall'
-    map.leftLocation = 'Medical room'
-    map.rightLocation = 'Wall'
+    map.forwardLocation = map.collisionObjects.localization
+    map.backwardLocation = map.BCWarehouse.localization
+    map.leftLocation = map.medRoom.localization
+    map.rightLocation = map.collisionObjects.localization
 
 def enter():
     print("You entering to " + player.location + "...")
     time.sleep(1)
 
-    if map.MAA.MapAreaAvailability.EngineeringRoom == True:
+    if map.MAA.Availabilty.EngineeringRoom == True:
         print("You are in " + player.location + " now...")
 
     else:

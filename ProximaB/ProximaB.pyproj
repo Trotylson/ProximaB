@@ -27,16 +27,25 @@
     <Compile Include="biowasteIncineratorLocation.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="chaningRoomLocation.py">
+    <Compile Include="changingRoomLocation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="collisionObjects.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="coreWarehouseLocation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="desinfectionRoomLocation.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="engineeringRoomLocation.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="etherLocation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mainControlRoomLocation.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="map.py">
@@ -54,8 +63,14 @@
     <Compile Include="player.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="powerStationLocation.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ProximaB.py" />
     <Compile Include="disposalRoomLocalization.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="warehouseOfRecoveredComponentsLocation.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

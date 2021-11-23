@@ -2,22 +2,22 @@ import player
 import time
 import map
 
-class MedicalRoom:
+class WarehouseOfRecoveredComponents():
     pass
 
-localization = 'Medical room'
+localization = 'Warehouse of recovered components'
 
 def setCoordinates():
     map.forwardLocation = map.collisionObjects.localization
-    map.backwardLocation = map.collisionObjects.localization
-    map.leftLocation = map.ether.localization
-    map.rightLocation = map.engiRoom.localization
+    map.backwardLocation = map.disposalRoom.localization
+    map.leftLocation = map.collisionObjects.localization
+    map.rightLocation = map.desinfectionRoom.localization
 
 def enter():
     print("You entering to " + player.location + "...")
     time.sleep(1)
 
-    if map.MAA.Availabilty.MedicalRoom == True:
+    if map.MAA.Availabilty.WarehouseOfRecoveredComponents == True:
         print("You are in " + player.location + " now...")
 
     else:

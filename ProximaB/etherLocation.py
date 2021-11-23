@@ -2,22 +2,22 @@ import player
 import time
 import map
 
-class Ether:
+class Ether():
     pass
 
-localization = 'Ether'
+localization = 'Ether - Drone bay'
 
 def setCoordinates():
-    map.forwardLocation = 'Changing room'
-    map.backwardLocation = 'Core warehouse'
-    map.leftLocation = 'Disposal room'
-    map.rightLocation = 'Medical room'
+    map.forwardLocation = map.changingRoom.localization
+    map.backwardLocation = map.coreWarehouse.localization
+    map.leftLocation = map.disposalRoom.localization
+    map.rightLocation = map.medRoom.localization
 
 def enter():
     print("You entering to " + player.location + "...")
     time.sleep(1)
 
-    if map.MAA.MapAreaAvailability.Ether == True:
+    if map.MAA.Availabilty.Ether == True:
         print("You are in " + player.location + " now...")
 
     else:

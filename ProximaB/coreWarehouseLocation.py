@@ -5,17 +5,19 @@ import map
 class CoreWarehouse:
     pass
 
+localization = 'Core warehouse'
+
 def setCoordinates():
-    map.forwardLocation = 'Ether'
-    map.backwardLocation = 'Wall'
-    map.leftLocation = 'Wall'
-    map.rightLocation = 'Bioengineering components warehouse'
+    map.forwardLocation = map.ether.localization
+    map.backwardLocation = map.collisionObjects.localization
+    map.leftLocation = map.collisionObjects.localization
+    map.rightLocation = map.BCWarehouse.localization
 
 def enter():
     print("You entering to " + player.location + "...")
     time.sleep(1)
 
-    if map.MAA.MapAreaAvailability.CoreWarehouse == True:
+    if map.MAA.Availabilty.CoreWarehouse == True:
         print("You are in " + player.location + " now...")
 
     else:

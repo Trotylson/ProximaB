@@ -2,22 +2,22 @@ import player
 import time
 import map
 
-class BioengineeringComponentsWarehouse:
+class PowerStation():
     pass
 
-localization = 'Bioengineering components warehouse'
+localization = 'Power station'
 
 def setCoordinates():
-    map.forwardLocation = map.engiRoom.localization
+    map.forwardLocation = map.collisionObjects.localization
     map.backwardLocation = map.collisionObjects.localization
-    map.leftLocation = map.coreWarehouse.localization
+    map.leftLocation = map.MCRoom.localization
     map.rightLocation = map.collisionObjects.localization
 
 def enter():
     print("You entering to " + player.location + "...")
     time.sleep(1)
 
-    if map.MAA.Availabilty.BioengineeringComponentsWarehouse == True:
+    if map.MAA.Availabilty.PowerStation == True:
         print("You are in " + player.location + " now...")
 
     else:

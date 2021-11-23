@@ -1,4 +1,4 @@
-class MapAreaAvailability:
+class Availabilty:
     Ether = True
     MedicalRoom = True
     EngineeringRoom = True
@@ -11,3 +11,4 @@ class MapAreaAvailability:
     PowerStation = True
     CoreWarehouse = True
     BioengineeringComponentsWarehouse = True
+    CollisionObjects = False

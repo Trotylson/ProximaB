@@ -5,17 +5,19 @@ import map
 class BiowasteIncinerator:
     pass
 
+localization = 'Biowaste incinerator'
+
 def setCoordinates():
-    map.forwardLocation = 'Disposal room'
-    map.backwardLocation = 'Wall'
-    map.leftLocation = 'Wall'
-    map.rightLocation = 'Wall'
+    map.forwardLocation = map.disposalRoom.localization
+    map.backwardLocation = map.collisionObjects.localization
+    map.leftLocation = map.collisionObjects.localization
+    map.rightLocation = map.collisionObjects.localization
 
 def enter():
     print("You entering to " + player.location + "...")
     time.sleep(1)
 
-    if map.MAA.MapAreaAvailability.BiowasteIncinerator == True:
+    if map.MAA.Availabilty.BiowasteIncinerator == True:
         print("You are in " + player.location + " now...")
 
     else:

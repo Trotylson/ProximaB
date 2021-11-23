@@ -5,17 +5,19 @@ import map
 class ChanginRoom:
     pass
 
+localization = 'Changing room'
+
 def setCoordinates():
-    map.forwardLocation = 'Desinfection room'
-    map.backwardLocation = 'Ether'
-    map.leftLocation = 'Wall'
-    map.rightLocation = 'Wall'
+    map.forwardLocation = map.desinfectionRoom.localization
+    map.backwardLocation = map.ether.localization
+    map.leftLocation = map.collisionObjects.localization
+    map.rightLocation = map.collisionObjects.localization
 
 def enter():
     print("You entering to " + player.location + "...")
     time.sleep(1)
 
-    if map.MAA.MapAreaAvailability.ChangingRoom == True:
+    if map.MAA.Availabilty.ChangingRoom == True:
         print("You are in " + player.location + " now...")
 
     else:
