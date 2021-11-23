@@ -6,7 +6,7 @@ class MedicalRoom:
     pass
 
 def setCoordinates():
-    map.forewardLocation = 'Wall'
+    map.forwardLocation = 'Wall'
     map.backwardLocation = 'Wall'
     map.leftLocation = 'Ether'
     map.rightLocation = 'Engineering room'

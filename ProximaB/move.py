@@ -8,7 +8,7 @@ def moveSelection(playerLocation):
     print('\n\nDrone location: ' + player.location + '\n')
 
     print('Give the command: \n\n'+
-          '\tFORWARD to '+ map.forewardLocation + 
+          '\tFORWARD to '+ map.forwardLocation + 
           '\n\tLEFT to '+ map.leftLocation +
           '\n\tRIGHT to '+ map.rightLocation +
           '\n\tBACKWARD to '+ map.backwardLocation +

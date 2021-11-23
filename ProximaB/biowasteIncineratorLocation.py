@@ -2,22 +2,20 @@ import player
 import time
 import map
 
-class Ether:
+class BiowasteIncinerator:
     pass
 
-localization = 'Ether'
-
 def setCoordinates():
-    map.forwardLocation = 'Changing room'
-    map.backwardLocation = 'Core warehouse'
-    map.leftLocation = 'Disposal room'
-    map.rightLocation = 'Medical room'
+    map.forwardLocation = 'Disposal room'
+    map.backwardLocation = 'Wall'
+    map.leftLocation = 'Wall'
+    map.rightLocation = 'Wall'
 
 def enter():
     print("You entering to " + player.location + "...")
     time.sleep(1)
 
-    if map.MAA.MapAreaAvailability.Ether == True:
+    if map.MAA.MapAreaAvailability.BiowasteIncinerator == True:
         print("You are in " + player.location + " now...")
 
     else:

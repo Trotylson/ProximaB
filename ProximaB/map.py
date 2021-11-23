@@ -1,21 +1,26 @@
 import player
+import mapAreaAvailability as MAA
 import etherLocation as ether
 import medicalRoomLocation as medRoom
-import engineeringRoom as enRoom
-import mapAreaAvailability as MAA
+import engineeringRoomLocation as engiRoom
+import disposalRoomLocalization as disposalRoom
+import chaningRoomLocation as changingRoom
+import coreWarehouseLocation as coreWarehouse
+import bioengineeringComponentsWarehouseLocation as BCWarehouse
+import biowasteIncineratorLocation as biowasteIncinerator
 
 class Map(MAA.MapAreaAvailability): # inherits by boolean variables in class!!!
     pass
 
-forewardLocation = ''
+forwardLocation = ''
 backwardLocation = ''
 leftLocation = ''
 rightLocation = ''
 
 def newLocation(playerChoose):
     if playerChoose == 'FORWARD':
-        player.location = forewardLocation
-        return forewardLocation
+        player.location = forwardLocation
+        return forwardLocation
     elif playerChoose == 'BACKWARD':
         player.location = backwardLocation
         return backwardLocation
@@ -35,8 +40,22 @@ def newCoordinates(playerLocation):
         medRoom.setCoordinates()
 
     elif playerLocation == 'Engineering room':
-        enRoom.setCoordinates()
+        engiRoom.setCoordinates()
 
+    elif playerLocation == 'Disposal room':
+        disposalRoom.setCoordinates()
+
+    elif playerLocation == 'Changing room':
+        changingRoom.setCoordinates()
+
+    elif playerLocation == 'Core warehouse':
+        coreWarehouse.setCoordinates()
+
+    elif playerLocation == 'Bioengineering components warehouse':
+        BCWarehouse.setCoordinates()
+
+    elif playerLocation == 'Biowaste incinerator':
+        biowasteIncinerator.setCoordinates()
 
 def tryEnter(playerLocation):
     if playerLocation == 'Ether':
@@ -46,4 +65,19 @@ def tryEnter(playerLocation):
         medRoom.enter()
 
     elif playerLocation == 'Engineering room':
-        enRoom.enter()
+        engiRoom.enter()
+
+    elif playerLocation == 'Disposal room':
+        disposalRoom.enter()
+
+    elif playerLocation == 'Changing room':
+        changingRoom.enter()
+
+    elif playerLocation == 'Core warehouse':
+        coreWarehouse.enter()
+
+    elif playerLocation == 'Bioengineering components warehouse':
+        BCWarehouse.enter()
+
+    elif playerLocation == 'Biowaste incinerator':
+        biowasteIncinerator.enter()

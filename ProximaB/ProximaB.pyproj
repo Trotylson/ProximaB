@@ -21,7 +21,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="engineeringRoom.py">
+    <Compile Include="bioengineeringComponentsWarehouseLocation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="biowasteIncineratorLocation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="chaningRoomLocation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="coreWarehouseLocation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="engineeringRoomLocation.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="etherLocation.py">
@@ -43,6 +55,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ProximaB.py" />
+    <Compile Include="disposalRoomLocalization.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
