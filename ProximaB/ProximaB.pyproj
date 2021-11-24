@@ -21,58 +21,79 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="bioengineeringComponentsWarehouseLocation.py">
+    <Compile Include="devTools.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="biowasteIncineratorLocation.py">
+    <Compile Include="gameMenu.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="changingRoomLocation.py">
+    <Compile Include="mainMenu.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="collisionObjects.py">
+    <Compile Include="World\Map\Locations\bioengineeringComponentsWarehouseLocation.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="coreWarehouseLocation.py">
+    <Compile Include="World\Map\Locations\biowasteIncineratorLocation.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="desinfectionRoomLocation.py">
+    <Compile Include="World\Map\Locations\changingRoomLocation.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="engineeringRoomLocation.py">
+    <Compile Include="World\Map\collisionObjects.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="etherLocation.py">
+    <Compile Include="World\Map\Locations\coreWarehouseLocation.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="mainControlRoomLocation.py">
+    <Compile Include="World\Map\Locations\desinfectionRoomLocation.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="map.py">
+    <Compile Include="World\Map\Locations\engineeringRoomLocation.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="mapAreaAvailability.py">
+    <Compile Include="World\Map\Locations\etherLocation.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="medicalRoomLocation.py">
+    <Compile Include="World\Map\Locations\mainControlRoomLocation.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="move.py">
+    <Compile Include="World\Map\map.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="player.py">
+    <Compile Include="World\mapAreaAvailability.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="powerStationLocation.py">
+    <Compile Include="World\Map\Locations\medicalRoomLocation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Player\inventory.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Player\move.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Player\player.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="World\Map\Locations\powerStationLocation.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ProximaB.py" />
-    <Compile Include="disposalRoomLocalization.py">
+    <Compile Include="World\Map\Locations\disposalRoomLocalization.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="warehouseOfRecoveredComponentsLocation.py">
+    <Compile Include="World\Map\Locations\warehouseOfRecoveredComponentsLocation.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="World\itemList.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="World\Map\" />
+    <Folder Include="World\Map\Locations\" />
+    <Folder Include="World\" />
+    <Folder Include="Player\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -1,6 +1,6 @@
-import player
+import Player.player as player
 import time
-import map
+import World.Map.map as map
 
 class CollisionObjects():
     pass
@@ -12,6 +12,6 @@ def checkCollision():
         pass
 
     else:
-        print("You cannot go through the " + player.location + "...")
+        print("You cannot go through the " + player.Location + "...")
         time.sleep(1)
-        player.location = player.lastLocation
+        player.Location = player.LastLocation

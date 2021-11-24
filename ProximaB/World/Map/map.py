@@ -1,18 +1,18 @@
-import player
-import mapAreaAvailability as MAA
-import collisionObjects
-import etherLocation as ether
-import medicalRoomLocation as medRoom
-import engineeringRoomLocation as engiRoom
-import disposalRoomLocalization as disposalRoom
-import changingRoomLocation as changingRoom
-import coreWarehouseLocation as coreWarehouse
-import bioengineeringComponentsWarehouseLocation as BCWarehouse
-import biowasteIncineratorLocation as biowasteIncinerator
-import desinfectionRoomLocation as desinfectionRoom
-import warehouseOfRecoveredComponentsLocation as WORC
-import mainControlRoomLocation as MCRoom
-import powerStationLocation as powerStation
+import Player.player as player
+import World.mapAreaAvailability as MAA
+import World.Map.collisionObjects as collisionObjects
+import World.Map.Locations.etherLocation as ether
+import World.Map.Locations.medicalRoomLocation as medRoom
+import World.Map.Locations.engineeringRoomLocation as engiRoom
+import World.Map.Locations.disposalRoomLocalization as disposalRoom
+import World.Map.Locations.changingRoomLocation as changingRoom
+import World.Map.Locations.coreWarehouseLocation as coreWarehouse
+import World.Map.Locations.bioengineeringComponentsWarehouseLocation as BCWarehouse
+import World.Map.Locations.biowasteIncineratorLocation as biowasteIncinerator
+import World.Map.Locations.desinfectionRoomLocation as desinfectionRoom
+import World.Map.Locations.warehouseOfRecoveredComponentsLocation as WORC
+import World.Map.Locations.mainControlRoomLocation as MCRoom
+import World.Map.Locations.powerStationLocation as powerStation
 
 class Map(MAA.Availabilty): # inherits by boolean variables class!!!
     pass
@@ -24,16 +24,16 @@ rightLocation = ''
 
 def newLocation(playerChoose):
     if playerChoose == 'forward':
-        player.location = forwardLocation
+        player.Location = forwardLocation
         return forwardLocation
     elif playerChoose == 'backward':
-        player.location = backwardLocation
+        player.Location = backwardLocation
         return backwardLocation
     elif playerChoose == 'left':
-        player.location = leftLocation
+        player.Location = leftLocation
         return leftLocation
     elif playerChoose == 'right':
-        player.location = rightLocation
+        player.Location = rightLocation
         return rightLocation
 
 

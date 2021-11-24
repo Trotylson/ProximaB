@@ -1,6 +1,6 @@
-import player
+import Player.player as player
 import time
-import map
+import World.Map.map as map
 
 class MainControlRoom():
     pass
@@ -14,13 +14,13 @@ def setCoordinates():
     map.rightLocation = map.powerStation.localization
 
 def enter():
-    print("You entering to " + player.location + "...")
+    print("You entering to " + player.Location + "...")
     time.sleep(1)
 
     if map.MAA.Availabilty.MainControlRoom == True:
-        print("You are in " + player.location + " now...")
+        print("You are in " + player.Location + " now...")
 
     else:
-        print("You can't enter to " + player.location + "! Door are closed...")
-        player.location = player.lastLocation
+        print("You can't enter to " + player.Location + "! Door are closed...")
+        player.Location = player.LastLocation
         time.sleep(1)
